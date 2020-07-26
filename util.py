@@ -104,6 +104,7 @@ def w2d(img, mode='haar', level=1):
 
 #predict fn
 def img_prediction(image):
+    load()
     global model
     x=[]
     # imgs=face_and_eye_detect(image)

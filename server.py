@@ -5,7 +5,6 @@ import base64
 
 
 app = Flask(__name__)
-util.load()
 
 @app.route('/')
 def sessions():

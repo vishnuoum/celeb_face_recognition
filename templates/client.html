@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='image.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='client.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static',filename='dropzone/dropzone.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='dropzone/dropzone.css') }}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{{ url_for('static',filename='images/messi.jpg') }}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Lionel Messi</h5>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{{ url_for('static',filename='images/maria.png') }}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Maria Sharapova</h5>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{{ url_for('static',filename='images/roger.jpg') }}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Roger Federer</h5>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{{ url_for('static',filename='images/serena.png') }}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Serena Williams</h5>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{{ url_for('static',filename='images/virat.jpg') }}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Virat Kohli</h5>
+                </div>
+            </div>
+        </div>
+
+
+        <form action="/file-upload" class="dropzone" id="form">
+            <div class="fallback">
+                <i class="material-icons text-muted">cloud_upload</i>
+                <input name="file" type="file" id="image" multiple />
+            </div>
+        </form>
+        <button type="submit" form="form" class="predict btn btn-block btn-secondary">Predict</button>
+
+
+    </div>
+
+
+</body>
+
+</html>
+
+<script src="{{ url_for('static',filename='client.js') }}"></script>
